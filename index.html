@@ -20,6 +20,8 @@
     --border: #e5e7eb;
     --dark: #111827;
     --transition: 0.3s ease;
+    --gold: #c9a84c;
+    --gold-dark: #a8882e;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -58,21 +60,28 @@
   /* HERO */
   .hero {
     position: relative; height: calc(100vh - 80px); min-height: 560px;
-    display: flex; align-items: flex-end; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
   }
   .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
   .hero-overlay {
     position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(to top, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.4) 55%, rgba(13,27,42,0.15) 100%);
+    background: rgba(13,27,42,0.58);
   }
-  .hero-content { position: relative; z-index: 2; padding: 60px 6% 80px; max-width: 720px; }
+  .hero-content { position: relative; z-index: 2; padding: 0 6%; max-width: 780px; text-align: center; }
+  .hero-eyebrow {
+    display: inline-block; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.45);
+    padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+  }
   .hero-content h1 {
     font-size: clamp(2rem, 5vw, 3.8rem);
     font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 20px;
   }
-  .hero-content h1 em { color: var(--green-light); font-style: normal; }
-  .hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
-  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-content h1 em { color: var(--gold); font-style: normal; }
+  .hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 
   /* BUTTONS */
   .btn {
@@ -87,6 +96,10 @@
   .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
   .btn-navy { background: var(--navy); color: var(--white); }
   .btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); }
+  .btn-gold { background: var(--gold); color: #111827; }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
+  .btn-dark { background: #111827; color: var(--white); border: 2px solid #111827; }
+  .btn-dark:hover { background: #1f2937; border-color: #1f2937; transform: translateY(-2px); }
 
   /* PARTNERS */
   .partners {
@@ -282,11 +295,12 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <div class="hero-eyebrow">Empowering Technical Education</div>
       <h1>Empowering Hands-On Learning with <em>Bestari Muda</em></h1>
       <p>Discover cutting-edge training tools for technical education worldwide at Bestari Muda.</p>
       <div class="hero-ctas">
-        <a href="mailto:inquiry@bestarimuda.com" class="btn btn-green">Submit Request</a>
-        <a href="https://wa.me/60173362718" target="_blank" class="btn btn-outline-white">Explore Partnership</a>
+        <a href="mailto:inquiry@bestarimuda.com" class="btn btn-gold">Submit Request</a>
+        <a href="https://wa.me/60173362718" target="_blank" class="btn btn-dark">Explore Partnership</a>
       </div>
     </div>
   </section>
@@ -350,22 +364,6 @@
     </div>
   </section>
 
-  <section class="dark-section">
-    <div class="two-col fade-in">
-      <div>
-        <div class="section-tag">Our Mission Statement</div>
-        <h2 class="section-title">Approved by the Deputy Prime Minister of Malaysia</h2>
-        <p class="section-desc">Approved by Ahmad Zahid bin Hamidi, Deputy Prime Minister and Minister of Rural and Regional Development — our mission is to empower technical education at every level.</p>
-        <br><br>
-        <a href="#" onclick="showPage('about')" class="btn btn-green">Learn More About Us</a>
-      </div>
-      <div class="mission-imgs">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=512,fit=crop/b1XSDBffvi9NpqHj/gmi-1-OJZo6YeZQsOitr43.jpeg" alt="Mission">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=348,fit=crop/b1XSDBffvi9NpqHj/gmi-2-5Do4NabEByUmOePI.jpeg" alt="Mission 2">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=366,fit=crop/b1XSDBffvi9NpqHj/gmi-1-OJZo6YeZQsOitr43.jpeg" alt="Mission 3">
-      </div>
-    </div>
-  </section>
 
 </div>
 
