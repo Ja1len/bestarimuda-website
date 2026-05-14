@@ -20,8 +20,6 @@
     --border: #e5e7eb;
     --dark: #111827;
     --transition: 0.3s ease;
-    --gold: #c9a84c;
-    --gold-dark: #a8882e;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -60,28 +58,21 @@
   /* HERO */
   .hero {
     position: relative; height: calc(100vh - 80px); min-height: 560px;
-    display: flex; align-items: center; justify-content: center; overflow: hidden;
+    display: flex; align-items: flex-end; overflow: hidden;
   }
   .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
   .hero-overlay {
     position: absolute; inset: 0; z-index: 1;
-    background: rgba(13,27,42,0.58);
+    background: linear-gradient(to top, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.4) 55%, rgba(13,27,42,0.15) 100%);
   }
-  .hero-content { position: relative; z-index: 2; padding: 0 6%; max-width: 780px; text-align: center; }
-  .hero-eyebrow {
-    display: inline-block; font-size: 0.72rem; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold); background: rgba(201,168,76,0.12);
-    border: 1px solid rgba(201,168,76,0.45);
-    padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
-  }
+  .hero-content { position: relative; z-index: 2; padding: 60px 6% 80px; max-width: 720px; }
   .hero-content h1 {
     font-size: clamp(2rem, 5vw, 3.8rem);
     font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 20px;
   }
-  .hero-content h1 em { color: var(--gold); font-style: normal; }
-  .hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
-  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .hero-content h1 em { color: var(--green-light); font-style: normal; }
+  .hero-content p { font-size: 1.1rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
   /* BUTTONS */
   .btn {
@@ -96,10 +87,6 @@
   .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
   .btn-navy { background: var(--navy); color: var(--white); }
   .btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); }
-  .btn-gold { background: var(--gold); color: #111827; }
-  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
-  .btn-dark { background: #111827; color: var(--white); border: 2px solid #111827; }
-  .btn-dark:hover { background: #1f2937; border-color: #1f2937; transform: translateY(-2px); }
 
   /* PARTNERS */
   .partners {
@@ -275,7 +262,7 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#" class="nav-logo" onclick="showPage('home')">
-    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/bestari-muda-Tobarln78mUgofya.png" alt="Bestari Muda">
+    <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778387637/logo_dwsnhn.avif" alt="Bestari Muda">
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#" class="active" data-page="home" onclick="showPage('home')">Home</a></li>
@@ -295,12 +282,11 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">Empowering Technical Education</div>
       <h1>Empowering Hands-On Learning with <em>Bestari Muda</em></h1>
       <p>Discover cutting-edge training tools for technical education worldwide at Bestari Muda.</p>
       <div class="hero-ctas">
-        <a href="mailto:inquiry@bestarimuda.com" class="btn btn-gold">Submit Request</a>
-        <a href="https://wa.me/60173362718" target="_blank" class="btn btn-dark">Explore Partnership</a>
+        <a href="mailto:inquiry@bestarimuda.com" class="btn btn-green">Submit Request</a>
+        <a href="https://wa.me/60173362718" target="_blank" class="btn btn-outline-white">Explore Partnership</a>
       </div>
     </div>
   </section>
@@ -315,8 +301,8 @@
     </div>
     <span class="partners-label">Who Bestari Muda Partnered With</span>
     <div class="partners-logos">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=195,fit=crop/b1XSDBffvi9NpqHj/chris-FLH3DKsd7UOnBs2P.png" alt="Christiani Germany" onerror="this.style.display='none'">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=108,fit=crop/b1XSDBffvi9NpqHj/gmiutem-kQWqhJPNlTY3Stwg.png" alt="GMI UTem" onerror="this.style.display='none'">
+      <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457131/christiani_logo_b0jold.webp" alt="Christiani Germany" onerror="this.style.display='none'">
+      <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457133/gmi_utem_logo_p9cjvf.webp" alt="GMI UTem" onerror="this.style.display='none'">
     </div>
   </div>
 
@@ -333,7 +319,7 @@
         <a href="#" onclick="showPage('services')" class="btn btn-navy" style="margin-top:8px;">View Our Services</a>
       </div>
       <div class="two-col-img">
-        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=512,fit=crop/b1XSDBffvi9NpqHj/gmi-1-OJZo6YeZQsOitr43.jpeg" alt="Training">
+        <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457137/visitors_at_gmi.png" alt="Training">
       </div>
     </div>
   </section>
@@ -364,6 +350,22 @@
     </div>
   </section>
 
+  <section class="dark-section">
+    <div class="two-col fade-in">
+      <div>
+        <div class="section-tag">Our Mission Statement</div>
+        <h2 class="section-title">Approved by the Deputy Prime Minister of Malaysia</h2>
+        <p class="section-desc">Approved by Ahmad Zahid bin Hamidi, Deputy Prime Minister and Minister of Rural and Regional Development — our mission is to empower technical education at every level.</p>
+        <br><br>
+        <a href="#" onclick="showPage('about')" class="btn btn-green">Learn More About Us</a>
+      </div>
+      <div class="mission-imgs">
+        <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457137/visitors_at_gmi.png" alt="Mission">
+        <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457135/pengunjung_gmi_uye2ps.jpg" alt="Mission 2">
+        <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457137/students_on_action_chpkiu.png" alt="Mission 3">
+      </div>
+    </div>
+  </section>
 
 </div>
 
@@ -376,10 +378,10 @@
   </div>
 
   <div class="slideshow" id="slideshow">
-    <div class="slideshow-img active"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/b1XSDBffvi9NpqHj/screenshot-2026-04-20-at-13.26.46-FwkDqXe78YWwTCL6.png" alt="Slide 1"></div>
-    <div class="slideshow-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/b1XSDBffvi9NpqHj/screenshot-2026-04-20-at-12.48.25-KHTi8MYhyRznwaOL.png" alt="Slide 2"></div>
-    <div class="slideshow-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/b1XSDBffvi9NpqHj/screenshot-2026-04-20-at-13.32.50-VxlHo664THVwEzwj.png" alt="Slide 3"></div>
-    <div class="slideshow-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/b1XSDBffvi9NpqHj/christiani-product-dK6koLxQmFIzTFvQ.png" alt="Slide 4"></div>
+    <div class="slideshow-img active"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457132/gmi_deputy_prime_minister_gl62d8.jpg" alt="Slide 1"></div>
+    <div class="slideshow-img"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457132/ev_car_yizocr.jpg" alt="Slide 2"></div>
+    <div class="slideshow-img"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457132/gmi_projects_mjjy1m.jpg" alt="Slide 3"></div>
+    <div class="slideshow-img"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457131/3d_printer_xoiwat.jpg" alt="Slide 4"></div>
   </div>
 
   <section>
@@ -396,10 +398,10 @@
       </div>
     </div>
     <div class="projects-grid fade-in">
-      <div class="project-card"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/screenshot-2026-04-21-at-09.42.49-Lo2SGXiC29gyy9G6.png" alt="Lab"><div class="project-card-label">International Lab Visit Program</div></div>
-      <div class="project-card"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/screenshot-2026-04-20-at-13.32.50-VxlHo664THVwEzwj.png" alt="Training"><div class="project-card-label">Advanced Technical Training</div></div>
-      <div class="project-card"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/gmi-approved-by-experts-QmCgW59eQYjfQfbj.jpg" alt="Expert"><div class="project-card-label">Expert-Approved Solutions</div></div>
-      <div class="project-card"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/marker-space-eq9N9cWZvygTtuuX.png" alt="Maker"><div class="project-card-label">Maker Space Facilities</div></div>
+      <div class="project-card"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457137/visitors_at_gmi.png" alt="Lab"><div class="project-card-label">International Lab Visit Program</div></div>
+      <div class="project-card"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457137/solar_and_3d_printer_vadhpk.png" alt="Training"><div class="project-card-label">Advanced Technical Training</div></div>
+      <div class="project-card"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457133/group_of_experts_zj81ef.jpg" alt="Expert"><div class="project-card-label">Expert-Approved Solutions</div></div>
+      <div class="project-card"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457135/interior_of_lab_f1svgi.png" alt="Maker"><div class="project-card-label">Maker Space Facilities</div></div>
     </div>
   </section>
 
@@ -413,7 +415,7 @@
       <div class="pillar"><div class="pillar-ico">🏫</div><div><h3>Institution Support</h3><p>Assisting organizations in enhancing technical education through innovative training solutions.</p></div></div>
     </div>
     <div style="width:100%;border-radius:12px;overflow:hidden;margin-top:48px;">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=381,fit=crop/b1XSDBffvi9NpqHj/gmi-services-ZJ19jRl9pNk7YuZZ.jpg" alt="Services" style="width:100%;height:200px;object-fit:cover;display:block;">
+      <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778457131/banner_m5s5gf.webp" alt="Services" style="width:100%;height:200px;object-fit:cover;display:block;">
     </div>
   </section>
 </div>
@@ -469,7 +471,7 @@
     <div class="section-tag">Leadership</div>
     <h2 class="section-title">Founders</h2>
     <div class="founder-grid fade-in">
-      <div class="founder-photo"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=843,fit=crop/b1XSDBffvi9NpqHj/bestari_muda_founder-BmLb4cj02VIEJM7b.png" alt="Johari"></div>
+      <div class="founder-photo"><img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778455901/bestarimuda_founder_oirjaf.png" alt="Johari"></div>
       <div class="founder-bio">
         <h3 class="founder-name">Johari</h3>
         <div class="founder-role">Co-Founder & CEO</div>
@@ -507,7 +509,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/b1XSDBffvi9NpqHj/bestari-muda-Tobarln78mUgofya.png" alt="Bestari Muda">
+      <img src="https://res.cloudinary.com/dbuxhg6q8/image/upload/v1778387637/logo_dwsnhn.avif" alt="Bestari Muda">
       <p>Providing state-of-the-art equipment for hands-on training, enhancing technical-industrial education globally.</p>
     </div>
     <div class="footer-col">
